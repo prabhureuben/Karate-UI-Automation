@@ -1,0 +1,27 @@
+18:37:40.505 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+18:37:40.635 preferred port 9515 not available, will use: 50212
+18:38:20.814 [print] Order Reference number is   GIDOMQFLL 
+18:38:24.372 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+18:38:24.376 preferred port 9515 not available, will use: 50299
+18:38:43.032 [print] Set the Frist Name as:  bINlGIs
+he subject of your bank wire.
+				An email has been sent with this information.
+		 Your order will be sent as soon as we receive payment.
+		If you have questions, comments or concerns, please contact our expert customer support team. .
+	
+16:13:09.947 [print] 
+		
+			Your order on My Store is complete.
+		
+		Please send us a bank wire with
+		- Amount  $18.51
+		- Name of account owner  Pradeep Macharla
+		- Include these details  xyz
+		- Bank name  RTP
+					- Do not forget to insert your order 
+16:13:09.964 [print]  DOVWMPRFK in the subject of your bank wire.
+				An email has been sent with this information.
+		 Your order will be sent as soon as we receive payment.
+		If you have questions, comments or concerns, please contact our expert customer support team. .
+	
+16:13:09.998 [print]  DOVWMPRFK 

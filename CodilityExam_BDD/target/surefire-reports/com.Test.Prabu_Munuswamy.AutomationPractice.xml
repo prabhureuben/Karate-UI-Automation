@@ -1,0 +1,100 @@
+<testsuite failures="0" name="com/Test/Prabu_Munuswamy/AutomationPractice.feature" skipped="0" tests="2" time="64.77986">
+  <testcase classname="com.Test.Prabu_Munuswamy.AutomationPractice" name="TC1 - Order T-shrit and Verify in Order History" time="43.55303">
+    <system-out>Given configure driver = {type: 'chromedriver'} ........................... passed
+Given driver 'http://automationpractice.com' .............................. passed
+And driver.maximize() ..................................................... passed
+And def urlvalue = driver.url ............................................. passed
+And match urlvalue == 'http://automationpractice.com/index.php' ........... passed
+Then click("{}Sign in") ................................................... passed
+And input("#email", "praburosary@gmail.com") .............................. passed
+And input("#passwd", "abc123") ............................................ passed
+And click("//span[text()[normalize-space()='Sign in']]") .................. passed
+And click("/(//a[@title='T-shirts'])[2]") ................................. passed
+And click("//a[@title='List']") ........................................... passed
+And click("#color_2") ..................................................... passed
+Then scroll("//span[text()='Add to cart']") ............................... passed
+And click("//span[text()='Add to cart']") ................................. passed
+And click("//span[text()[normalize-space()='Proceed to checkout']]") ...... passed
+Then scroll("//span[text()='Proceed to checkout']") ....................... passed
+And click("//span[text()='Proceed to checkout']") ......................... passed
+Then scroll("//span[text()='Proceed to checkout']") ....................... passed
+And click("//span[text()='Proceed to checkout']") ......................... passed
+And click("#cgv") ......................................................... passed
+And click("/(//span[text()[normalize-space()='Proceed to checkout']])[2]") . passed
+Then scroll("//a[@title='Pay by bank wire']") ............................. passed
+And click("//a[@title='Pay by bank wire']") ............................... passed
+And click("//span[text()='I confirm my order']") .......................... passed
+Then screenshot() ......................................................... passed
+Then scroll("div#center_column&gt;div") ...................................... passed
+Then screenshot("div#center_column&gt;div") .................................. passed
+And def myorder = driver.text("div#center_column&gt;div") .................... passed
+And def str1 = myorder.split("reference") ................................. passed
+And def myorder_ref = str1[1].split("in") ................................. passed
+Then print 'Order Reference number is ', myorder_ref[0] ................... passed
+And click("//a[@title='Back to orders']") ................................. passed
+Then scroll("//tr[@class='first_item ']//td[1]") .......................... passed
+Then screenshot() ......................................................... passed
+And def orderhistory = driver.text("//tr[@class='first_item ']//td[1]") ... passed
+And match myorder_ref[0].trim() == orderhistory.trim() .................... passed</system-out>
+  </testcase>
+  <testcase classname="com.Test.Prabu_Munuswamy.AutomationPractice" name="TC2 - Update Personal Information (FirstName) in - My Account" time="21.22683">
+    <system-out>Given configure driver = {type: 'chromedriver'} ........................... passed
+Given driver 'http://automationpractice.com' .............................. passed
+And driver.maximize() ..................................................... passed
+And def urlvalue = driver.url ............................................. passed
+And match urlvalue == 'http://automationpractice.com/index.php' ........... passed
+Then click("{}Sign in") ................................................... passed
+And input("#email", "praburosary@gmail.com") .............................. passed
+And input("#passwd", "abc123") ............................................ passed
+And click("//span[text()[normalize-space()='Sign in']]") .................. passed
+And click("/(//a[@title='T-shirts'])[2]") ................................. passed
+And click("//a[@title='List']") ........................................... passed
+And click("#color_2") ..................................................... passed
+Then scroll("//span[text()='Add to cart']") ............................... passed
+And click("//span[text()='Add to cart']") ................................. passed
+And click("//span[text()[normalize-space()='Proceed to checkout']]") ...... passed
+Then scroll("//span[text()='Proceed to checkout']") ....................... passed
+And click("//span[text()='Proceed to checkout']") ......................... passed
+Then scroll("//span[text()='Proceed to checkout']") ....................... passed
+And click("//span[text()='Proceed to checkout']") ......................... passed
+And click("#cgv") ......................................................... passed
+And click("/(//span[text()[normalize-space()='Proceed to checkout']])[2]") . passed
+Then scroll("//a[@title='Pay by bank wire']") ............................. passed
+And click("//a[@title='Pay by bank wire']") ............................... passed
+And click("//span[text()='I confirm my order']") .......................... passed
+Then screenshot() ......................................................... passed
+Then scroll("div#center_column&gt;div") ...................................... passed
+Then screenshot("div#center_column&gt;div") .................................. passed
+And def myorder = driver.text("div#center_column&gt;div") .................... passed
+And def str1 = myorder.split("reference") ................................. passed
+And def myorder_ref = str1[1].split("in") ................................. passed
+Then print 'Order Reference number is ', myorder_ref[0] ................... passed
+And click("//a[@title='Back to orders']") ................................. passed
+Then scroll("//tr[@class='first_item ']//td[1]") .......................... passed
+Then screenshot() ......................................................... passed
+And def orderhistory = driver.text("//tr[@class='first_item ']//td[1]") ... passed
+And match myorder_ref[0].trim() == orderhistory.trim() .................... passed
+Given configure driver = {type: 'chromedriver'} ........................... passed
+Given driver 'http://automationpractice.com' .............................. passed
+And driver.maximize() ..................................................... passed
+And def urlvalue = driver.url ............................................. passed
+And match urlvalue == 'http://automationpractice.com/index.php' ........... passed
+Then click("{}Sign in") ................................................... passed
+And input("#email", "praburosary@gmail.com") .............................. passed
+And input("#passwd", "abc123") ............................................ passed
+And click("//span[text()[normalize-space()='Sign in']]") .................. passed
+And def randomname = ...................................................... passed
+And def firstname = call randomname '7' ................................... passed
+And click("{}My account") ................................................. passed
+And click("//span[text()='My personal information']") ..................... passed
+Then scroll("div#center_column&gt;div&gt;h1") ................................... passed
+Then print 'Set the Frist Name as: ', firstname ........................... passed
+And clear('#firstname') ................................................... passed
+And input("#firstname", firstname) ........................................ passed
+And input("#old_passwd", "abc123") ........................................ passed
+Then screenshot() ......................................................... passed
+And click("//span[text()='Save']") ........................................ passed
+And assert exists("//p[@class='alert alert-success']") .................... passed
+Then screenshot() ......................................................... passed</system-out>
+  </testcase>
+</testsuite>
